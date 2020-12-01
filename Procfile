@@ -1,1 +1,1 @@
-web: gunicorn wsgi:app
+web: sh setup.sh && streamlit run katas.py
