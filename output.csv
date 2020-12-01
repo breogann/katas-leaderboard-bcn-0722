@@ -2,18 +2,31 @@ username,counting-sheep-dot-dot-dot,fake-binary,sum-mixed-array,deodorant-evapor
 AnaMA,True,True,True,True,True,True,True,True,True,True,True,True,True,False,True,True,True,True,True,False,True
 JaimeCalcedo,False,False,True,True,True,False,True,True,False,False,False,False,False,False,False,False,True,True,False,True,True
 jaimevazquezg,False,False,True,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+<<<<<<< HEAD
+BlueJotas,True,False,True,True,False,True,False,False,False,True,True,False,False,False,False,False,False,True,False,False,False
+=======
 BlueJotas,True,False,True,True,False,True,False,False,False,True,True,False,False,False,False,False,False,True,False,False,True
+>>>>>>> dbbd07cca555ef0a71cf664ce517b9ac5b528d0d
 Jesus_perez,True,True,True,True,False,True,True,True,False,True,True,False,True,True,True,True,True,True,False,True,True
 JoseManuel-G,True,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
 pptrv,False,False,True,False,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False
 jm00code,True,True,True,True,True,True,True,True,True,True,True,True,False,False,True,True,True,True,True,False,True
 juanpe17,False,False,True,True,False,True,False,True,False,True,True,False,False,False,True,True,False,True,False,False,True
+<<<<<<< HEAD
+leticia-sobrino,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,True,False,False,False
+LucianaLescano,True,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Marxess,False,False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
+Mario Sainz,True,False,True,False,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False
+Nuria Peñas,False,False,True,True,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False
+patri.carrasco,True,True,True,True,False,True,True,False,True,False,False,False,False,False,False,False,False,True,False,False,False
+=======
 leticia-sobrino,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False,False,False,True,False,False,True
 LucianaLescano,True,False,False,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,False
 Marxess,False,False,True,True,False,False,False,True,False,False,False,False,False,False,False,False,False,False,False,False,True
 Mario Sainz,True,False,True,False,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,False
 Nuria Peñas,False,False,True,True,False,False,False,False,False,True,True,False,False,False,False,False,False,False,False,False,True
 patri.carrasco,True,True,True,True,False,True,True,False,True,False,False,False,False,False,False,False,False,True,False,False,True
+>>>>>>> dbbd07cca555ef0a71cf664ce517b9ac5b528d0d
 rrodcan,False,False,True,True,False,True,True,True,True,True,True,False,False,False,True,True,True,True,True,False,True
 sergio calero,True,False,True,True,False,True,False,False,False,False,False,False,False,False,False,False,True,False,False,False,False
 sgonzalainen,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True,True
