@@ -2,8 +2,11 @@ from flask import Flask, request
 import pandas as pd
 import markdown
 import markdown.extensions.fenced_code
+import os
 
 app = Flask(__name__)
+
+os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-kata-student-correction-ih/master/output/output.csv")
 
 katas = pd.read_csv("output.csv")
 kyu = [5, 6, 5, 5, 5, 5, 5]
