@@ -44,6 +44,3 @@ def totalkatas():
     return katas.to_json()
     
 app.run("0.0.0.0", 8000, debug=True) #http://0.0.0.0:8000/
-
-if __name__ == "__main__":
-    app.run()
