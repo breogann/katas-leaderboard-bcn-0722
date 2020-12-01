@@ -15,7 +15,7 @@ st.image (image,use_column_width=True)
 os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-kata-student-correction-ih/master/output/output.csv")
 
 katas = pd.read_csv("output.csv")
-kyu = [5, 6, 5, 5, 5, 5, 5]
+kyu = [5, 6, 5, 5, 5, 5, 5, 6]
 katas_ponderadas = {j:k for j,k in zip(katas.columns, kyu)}
 
 katas.set_index('username', inplace=True)
