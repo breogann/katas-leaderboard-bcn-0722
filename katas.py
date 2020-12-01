@@ -4,7 +4,6 @@ import pandas as pd
 from PIL import Image
 
 
-
 st.markdown("<h1 style='text-align: center; color: black;'>¡Juego de las Katas Datamad1020-rev!</h1>", unsafe_allow_html=True)
 
 image = Image.open('images/portada.jpg')
