@@ -1,5 +1,5 @@
 import streamlit as st
-import numpy as n
+import numpy as np
 import os
 import pandas as pd
 from PIL import Image
