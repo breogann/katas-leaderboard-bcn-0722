@@ -45,7 +45,13 @@ katas = katas.drop(listadrop, axis = 1)
 
     #katas = katas.applymap(lambda x: 1 if x==True else 0)
 katas_ponderadas = {nombre:valor for nombre,valor in zip(katas.columns, puntos)}
-    
+
+    #total de puntos que puedes tener
+total = sum(katas_ponderadas.values())
+
+    #Porcentaje para participar en el sorteo
+porcentaje = (total * 40) / 100
+
     
     #Ponderación en el DF
 for columna in katas.columns:
@@ -61,23 +67,31 @@ katas = katas.sort_values(by=['PUNTOS_TOTAL'], ascending=False)
 
     #saco un df solo con la columna puntos para hacer visualización en st
 paramostrar = katas["PUNTOS_TOTAL"]
+finalistas = katas[(katas["PUNTOS_TOTAL"]>= porcentaje)]["PUNTOS_TOTAL"]
+st.write(
+f"Para participar en el sorteo necesitas tener el 40% de los puntos totales, es decir... más de  {porcentaje}"
+)
+
 
 st.write(
 """
-Mira la tabla general
+--------------------  TABLA DE PARTICIPANTES FINALES -------------------
 """
 )
-st.dataframe(paramostrar)
+
+
+st.dataframe(finalistas)
+
 st.write(
 """
-Mira las katas que has hecho y los puntos que te da cada una
+--------------------  TABLA DE PUNTOS GENERAL -------------------
 """
 )
 st.dataframe(katas)
 
-total = sum(katas_ponderadas.values())
 
 st.write(
 f"El total de puntos es {total}"
 )
+
 
