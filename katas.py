@@ -5,7 +5,7 @@ import pandas as pd
 from PIL import Image
 
     #título API
-st.markdown("<h1 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad0121! 🥋🔥</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad0121! 🥋🔥</h2>", unsafe_allow_html=True)
     #imagen de portada api
 image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
@@ -16,7 +16,7 @@ os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-ka
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
-kyu = [5, 7, 6, 5, 6, 5, 6, 6, 7, 6, 6, 5, 6, 5, 5, 6]
+kyu = [8]
 
     #diccionario con puntos que le damos a las katas
 pondera = {5:12, 6:9, 7:6, 8:4}
@@ -26,22 +26,6 @@ puntos = [pondera.get(a) for a in kyu]
 
     #seteamos el index del dataframe por USERNAME del alumnado
 katas.set_index('username', inplace=True)
-
-    #títulos de las katas uqe no juegan
-listadrop = ['counting-sheep-dot-dot-dot',
- 'fake-binary',
- 'sum-mixed-array',
- 'deodorant-evaporator',
- 'user-class-for-banking-system',
- 'counting-in-the-amazon',
- 'tests-results',
- 'count-the-smiley-faces',
- 'see-you-next-happy-year',
- 'sql-with-harry-potter-sorting-hat-comparators',
- 'sql-basics-monsters-using-case']
-
-    #Dropeo de columnas de cuando no se jugaba
-katas = katas.drop(listadrop, axis = 1)
 
     #katas = katas.applymap(lambda x: 1 if x==True else 0)
 katas_ponderadas = {nombre:valor for nombre,valor in zip(katas.columns, puntos)}
@@ -68,30 +52,18 @@ katas = katas.sort_values(by=['PUNTOS_TOTAL'], ascending=False)
     #saco un df solo con la columna puntos para hacer visualización en st
 paramostrar = katas["PUNTOS_TOTAL"]
 finalistas = katas[(katas["PUNTOS_TOTAL"]>= porcentaje)]["PUNTOS_TOTAL"]
-st.write(
-f"Para participar en el sorteo necesitas tener el 40% de los puntos totales, es decir... más de  {porcentaje}"
-)
+
+st.markdown("<h4 style='text-align: center; color: black;'> 🚀 -------  TABLA DE PUNTOS GENERAL ------- 🚀</h4>", unsafe_allow_html=True)
 
 
-st.write(
-"""
---------------------  TABLA DE PARTICIPANTES FINALES -------------------
-"""
-)
-
-
-st.dataframe(finalistas)
-
-st.write(
-"""
---------------------  TABLA DE PUNTOS GENERAL -------------------
-"""
-)
 st.dataframe(katas)
 
 
 st.write(
-f"El total de puntos es {total}"
+f"El total de puntos que puedes tener ahora mismo es {total}"
 )
 
 
+st.markdown("<h4 style='text-align: center; color: black;'> 🙊 -------  Resumen solo con total ------- 🙊</h4>", unsafe_allow_html=True)
+
+st.dataframe(paramostrar)
