@@ -5,5 +5,5 @@
 Hemos creado este repositorio para deployear una API que le muestre al alumnado la canitad de katas que ha sacado a tiempo y la puntuación que le da cada kata, de cara a hacer un juego con la dinámica de katas en el bootcamp de data de Ironhack.
 
 Creadores:
-- Fernando Costa (@breogann)
-- Amanda Gálvez (@agalvezcorell)
+- [Fernando Costa](https://github.com/breogann/)
+- [Amanda Gálvez](https://github.com/agalvezcorell/)
