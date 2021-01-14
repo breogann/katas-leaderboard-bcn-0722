@@ -16,7 +16,7 @@ os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-ka
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
-kyu = [8,8]
+kyu = [8,8,8]
 
     #diccionario con puntos que le damos a las katas
 pondera = {5:12, 6:9, 7:6, 8:4}
@@ -40,6 +40,7 @@ porcentaje = (total * 40) / 100
     #Ponderación en el DF
 for columna in katas.columns:
     katas[f"{columna}"] = np.where(katas[f"{columna}"] == True,katas_ponderadas.get(f"{columna}"),0)
+
 
     #Total katas
 katas['TOTAL_KATAS'] = katas.sum(axis=1)
