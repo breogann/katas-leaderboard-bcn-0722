@@ -41,17 +41,22 @@ porcentaje = (total * 40) / 100
 for columna in katas.columns:
     katas[f"{columna}"] = np.where(katas[f"{columna}"] == True,katas_ponderadas.get(f"{columna}"),0)
 
+    #Voy a hacer una copia del df con 1 en vez de ponderación para sacar un count
+
+copia = katas.copy()
+copia = copia.applymap(lambda x: 1 if x!=0 else 0)
+
 
     #Total katas
-katas['TOTAL_KATAS'] = katas.sum(axis=1)
+katas['Has_Sacado'] = copia.sum(axis=1)
 
 
     #Suma por puntos
-katas['PUNTOS_TOTAL'] = katas.sum(axis=1) - katas.TOTAL_KATAS
+katas['PUNTOS_TOTAL'] = katas.sum(axis=1) - katas.Has_Sacado
 katas = katas.sort_values(by=['PUNTOS_TOTAL'], ascending=False)
 
     #saco un df solo con la columna puntos para hacer visualización en st
-paramostrar = katas["PUNTOS_TOTAL"]
+paramostrar = katas[['Has_Sacado',"PUNTOS_TOTAL"]]
 finalistas = katas[(katas["PUNTOS_TOTAL"]>= porcentaje)]["PUNTOS_TOTAL"]
 
 st.markdown("<h4 style='text-align: center; color: black;'> 🚀 -------  TABLA DE PUNTOS GENERAL ------- 🚀</h4>", unsafe_allow_html=True)
