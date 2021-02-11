@@ -10,7 +10,6 @@ st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de l
 image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
 
-
     #saca el archivo del repo de katas que usamos para ver quién saca
 os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-kata-student-correction-ih/master/output/output.csv")
 katas = pd.read_csv("output.csv")
