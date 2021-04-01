@@ -5,7 +5,7 @@ import pandas as pd
 from PIL import Image
 
     #título API
-st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad0121! 🥋🔥</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad0321! 🥋🔥</h2>", unsafe_allow_html=True)
     #imagen de portada api
 image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
@@ -15,7 +15,11 @@ os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-ka
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
+<<<<<<< HEAD
 kyu = [8, 8, 8, 7]
+=======
+kyu = [8, 8, 8, 8]
+>>>>>>> 6f59a3a6a4e6dc030f6cde1e1c8923df903e7caf
 
     #diccionario con puntos que le damos a las katas
 pondera = {5:12, 6:9, 7:6, 8:4}
