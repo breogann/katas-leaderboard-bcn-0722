@@ -15,11 +15,7 @@ os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-ka
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
-<<<<<<< HEAD
-kyu = [8, 8, 8, 7]
-=======
-kyu = [8, 8, 8, 8]
->>>>>>> 6f59a3a6a4e6dc030f6cde1e1c8923df903e7caf
+kyu = [8, 8, 8, 8, 7, 7]
 
     #diccionario con puntos que le damos a las katas
 pondera = {5:12, 6:9, 7:6, 8:4}
