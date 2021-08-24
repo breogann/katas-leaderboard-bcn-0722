@@ -15,7 +15,7 @@ os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-ka
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
-kyu = [8, 7, 7, 8, 8,7]
+kyu = [8, 7, 7, 8, 8,7, 6]
 
 
 #week_4_0321 = [6, 7, 6]
