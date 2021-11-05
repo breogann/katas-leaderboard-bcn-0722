@@ -5,7 +5,7 @@ import pandas as pd
 from PIL import Image
 
     #título API
-st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad0521! 🥋🔥</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: black;'>🔥🥋 ¡Juego de las Katas Datamad1021! 🥋🔥</h2>", unsafe_allow_html=True)
     #imagen de portada api
 image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
