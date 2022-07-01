@@ -11,7 +11,7 @@ image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
 
     #saca el archivo del repo de katas que usamos para ver quién saca
-os.system("curl -LJO https://raw.githubusercontent.com/agalvezcorell/codewars-kata-student-correction-ih/master/output/output.csv")
+os.system("curl -LJO https://github.com/Ironhack-Data-BCN-July-2022/STAFF-katas-check/master/output/output.csv")
 katas = pd.read_csv("output.csv")
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
