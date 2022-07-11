@@ -27,7 +27,7 @@ pondera = {5:12, 6:9, 7:6, 8:4}
 puntos = [pondera.get(a) for a in kyu]
 
     #seteamos el index del dataframe por USERNAME del alumnado
-katas.set_index('name', inplace=True)
+katas.set_index('username', inplace=True)
 
     #katas = katas.applymap(lambda x: 1 if x==True else 0)
 katas_ponderadas = {nombre:valor for nombre,valor in zip(katas.columns, puntos)}
