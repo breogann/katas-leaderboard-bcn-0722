@@ -13,26 +13,21 @@ st.image (image,use_column_width=True)
     #saca el archivo del repo de katas que usamos para ver quién saca
 os.system("curl -LJO https://raw.githubusercontent.com/PauPerL/codewars-kata-student-correction-ih/master/output/output.csv")
 katas = pd.read_csv("output.csv", error_bad_lines=False)
-print(katas.head())
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
 kyu = [8, 7, 7, 7, 8, 7, 5]
 
-#countingsheep: 8
-#counting in the amazon: 7
-#deodorant: 7
-#test-results:7
-#keep hydrated: 8
-# see you next happy year: 7
-#pete the baker: 5
-
-
-#count the simley faces: 6
-#fake binary: 8
-
-
-
-#week_4_0321 = [6, 7, 6]
+kyus_by_kata  = { 
+    "counting-sheep-dot-dot-dot": 8,
+    "counting-in-the-amazon": 7,
+    "deodorant-evaporator":7,
+    "fake-binary": 8,
+    "tests-results": 7,
+    "keep-hydrated-1": 8,
+    "see-you-next-happy-year": 7,
+    "pete-the-baker": 5,
+    "count-the-smiley-faces": 6
+}
 
     #diccionario con puntos que le damos a las katas
 pondera = {5:12, 6:9, 7:6, 8:4}
