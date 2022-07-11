@@ -63,11 +63,11 @@ katas['You_obtained'] = copia.sum(axis=1)
 
 
     #Suma por puntos
-katas['TOTAL_SCORE'] = katas.sum(axis=1) - katas.Has_Sacado
+katas['TOTAL_SCORE'] = katas.sum(axis=1) - katas.You_obtained
 katas = katas.sort_values(by=['TOTAL_SCORE'], ascending=False)
 
     #saco un df solo con la columna puntos para hacer visualización en st
-paramostrar = katas[['Has_Sacado',"TOTAL_SCORE"]]
+paramostrar = katas[['You_obtained',"TOTAL_SCORE"]]
 finalistas = katas[(katas["TOTAL_SCORE"]>= porcentaje)]["TOTAL_SCORE"]
 
 st.markdown("<h4 style='text-align: center; color: black;'> 🚀 -------  GENERAL SCORES ------- 🚀</h4>", unsafe_allow_html=True)
