@@ -11,8 +11,9 @@ image = Image.open('images/portada.jpg')
 st.image (image,use_column_width=True)
 
     #saca el archivo del repo de katas que usamos para ver quién saca
-os.system("curl -LJO https://github.com/PauPerL/codewars-kata-student-correction-ih/blob/master/output/output.csv")
+os.system("curl -LJO https://raw.githubusercontent.com/PauPerL/codewars-kata-student-correction-ih/master/output/output.csv")
 katas = pd.read_csv("output.csv", error_bad_lines=False)
+print(katas.head())
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
 kyu = [8, 7, 7, 8, 8,7, 8, 6, 7, 5,5,7, 6,6,6,6,6,6,8]
