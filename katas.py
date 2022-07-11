@@ -16,7 +16,21 @@ katas = pd.read_csv("output.csv", error_bad_lines=False)
 print(katas.head())
 
     #hasta que arreglemos esto, habrá que meter los kyu a mano
-kyu = [8, 7, 7, 8, 8,7, 8, 6, 7, 5,5,7, 6,6,6,6,6,6,8]
+kyu = [8, 7, 7, 7, 8, 7, 5]
+
+#countingsheep: 8
+#counting in the amazon: 7
+#deodorant: 7
+#test-results:7
+#keep hydrated: 8
+# see you next happy year: 7
+#pete the baker: 5
+
+
+#count the simley faces: 6
+#fake binary: 8
+
+
 
 #week_4_0321 = [6, 7, 6]
 
@@ -61,17 +75,17 @@ katas = katas.sort_values(by=['PUNTOS_TOTAL'], ascending=False)
 paramostrar = katas[['Has_Sacado',"PUNTOS_TOTAL"]]
 finalistas = katas[(katas["PUNTOS_TOTAL"]>= porcentaje)]["PUNTOS_TOTAL"]
 
-st.markdown("<h4 style='text-align: center; color: black;'> 🚀 -------  TABLA DE PUNTOS GENERAL ------- 🚀</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: black;'> 🚀 -------  GENERAL SCORES ------- 🚀</h4>", unsafe_allow_html=True)
 
 
 st.dataframe(katas)
 
 
 st.write(
-f"El total de puntos que puedes tener ahora mismo es {total}"
+f"The max score you can get so far is: {total}"
 )
 
 
-st.markdown("<h4 style='text-align: center; color: black;'> 🙊 -------  Resumen solo con total ------- 🙊</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: black;'> 🙊 -------  Total scores ------- 🙊</h4>", unsafe_allow_html=True)
 
 st.dataframe(paramostrar)
