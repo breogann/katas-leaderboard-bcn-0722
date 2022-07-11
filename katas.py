@@ -17,7 +17,6 @@ katas = pd.read_csv("output.csv", error_bad_lines=False)
     #hasta que arreglemos esto, habrá que meter los kyu a mano
 kyu = [8, 7, 7, 8, 8,7, 8, 6, 7, 5,5,7, 6,6,6,6,6,6,8]
 
-
 #week_4_0321 = [6, 7, 6]
 
     #diccionario con puntos que le damos a las katas
@@ -27,7 +26,7 @@ pondera = {5:12, 6:9, 7:6, 8:4}
 puntos = [pondera.get(a) for a in kyu]
 
     #seteamos el index del dataframe por USERNAME del alumnado
-katas.set_index('username', inplace=True)
+katas.set_index("username", inplace=True)
 
     #katas = katas.applymap(lambda x: 1 if x==True else 0)
 katas_ponderadas = {nombre:valor for nombre,valor in zip(katas.columns, puntos)}
